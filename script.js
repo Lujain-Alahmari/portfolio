@@ -76,6 +76,7 @@ const sections = {
       <h2>Say <em>hello!</em> ✦</h2>
       <p>Have a role, an idea, or a project you'd like to discuss? I'd love to hear about it.</p>
       <a class="contact-link" href="mailto:alahmari1lujain@gmail.com">✉ &nbsp; alahmari1lujain@gmail.com ↗</a>
+      <a class="contact-link" href="tel:+966501694824">☎ &nbsp; +966 50 169 4824 ↗</a>
       <a class="contact-link" href="https://www.linkedin.com/in/lujain-mesfer-155773254/" target="_blank" rel="noopener noreferrer">↗ &nbsp; LinkedIn / lujain-mesfer</a>
       <a class="contact-link" href="https://github.com/Lujain-Alahmari" target="_blank" rel="noopener noreferrer">⌘ &nbsp; GitHub / Lujain-Alahmari</a>
       <p class="smallprint">Based in Abha, Saudi Arabia · Open to opportunities</p>`
