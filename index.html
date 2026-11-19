@@ -7,7 +7,7 @@
   <meta name="description" content="Lujain Mesfer — AI Engineer focused on NLP, RAG and human-centered technology." />
   <title>Lujain Mesfer · Portfolio OS</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>.hero-crt{display:block;width:100%;height:auto;aspect-ratio:900 / 690;overflow:visible;transition:transform .45s cubic-bezier(.2,.8,.2,1)}.intro-art:hover .hero-crt{transform:translateY(-6px)}@media(prefers-reduced-motion:reduce){.hero-crt{transition:none}.intro-art:hover .hero-crt{transform:none}}</style>
+  <style>.hero-crt{display:block;width:100%;height:auto;aspect-ratio:900 / 690;overflow:visible;transition:transform .45s cubic-bezier(.2,.8,.2,1)}.intro-art:hover .hero-crt{transform:translateY(-6px)}.hero-star{transform-box:fill-box;transform-origin:center;animation:hero-twinkle 3.2s ease-in-out infinite}.hero-star-two{animation-delay:.9s}.hero-star-three{animation-delay:1.8s}.hero-star-screen{animation-delay:1.3s;animation-duration:4s}@keyframes hero-twinkle{0%,100%{transform:scale(.86) rotate(-8deg);opacity:.72}50%{transform:scale(1.16) rotate(8deg);opacity:1}}@media(prefers-reduced-motion:reduce){.hero-crt{transition:none}.intro-art:hover .hero-crt{transform:none}.hero-star{animation:none}}</style>
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -43,7 +43,7 @@
             <circle cx="318" cy="184" r="87" fill="#f4faff" opacity=".68"/>
             <path d="M205 149c-13-22-45-24-59-5-28-7-45 15-33 37h121c12-19-7-40-29-32Z" fill="#f6fbff" opacity=".94"/>
             <path d="M682 153c-11-18-33-16-43-2-26-5-37 25-15 35h80c17-13 3-34-22-33Z" fill="#f6fbff" opacity=".94"/>
-            <g fill="#ed9fc1"><path d="m124 130 9 23 23 9-23 9-9 23-9-23-23-9 23-9Z"/><path d="m785 360 8 21 21 8-21 8-8 21-8-21-21-8 21-8Z"/><path d="m220 479 8 19 19 8-19 8-8 19-8-19-19-8 19-8Z"/></g>
+            <g fill="#ed9fc1" class="hero-stars"><path class="hero-star hero-star-one" d="m124 130 9 23 23 9-23 9-9 23-9-23-23-9 23-9Z"/><path class="hero-star hero-star-two" d="m785 360 8 21 21 8-21 8-8 21-8-21-21-8 21-8Z"/><path class="hero-star hero-star-three" d="m220 479 8 19 19 8-19 8-8 19-8-19-19-8 19-8Z"/></g>
             <g transform="translate(188 333) rotate(-12 48 48)" filter="url(#crt-shadow)">
               <rect x="0" y="0" width="103" height="105" rx="17" fill="#f8fbff" stroke="#567aa2" stroke-width="4"/>
               <path d="M1 19h101" stroke="#567aa2" stroke-width="4"/><path d="M2 19V16Q2 1 17 1h69q16 0 16 16v2Z" fill="#f5b5cf"/>
@@ -54,24 +54,26 @@
             <path d="M658 374q30-12 59 0v33q-3 29-29 44-27-15-30-44Z" fill="#c6ddf4" stroke="#fff" stroke-width="4"/>
             <rect x="672" y="401" width="32" height="29" rx="6" fill="#59779f"/><path d="M678 402v-8a10 10 0 0 1 20 0v8" fill="none" stroke="#59779f" stroke-width="6"/><circle cx="688" cy="412" r="3" fill="white"/>
             <g filter="url(#crt-shadow)">
-              <path d="M309 251q0-50 50-58l275-14q52-3 73 45l35 58v250q-12 45-54 47l-348 5q-45 0-46-52Z" fill="#8a8cac" stroke="#526a95" stroke-width="5"/>
-              <path d="M271 260q-4-50 44-56l326-19q40-1 44 48v294q-1 43-45 47l-321 9q-47 0-48-44Z" fill="url(#crt-frame)" stroke="#536b92" stroke-width="6"/>
-              <path d="M304 268q-2-34 32-38l273-14q39-1 40 36v226q-2 32-36 34l-280 7q-31 0-31-29Z" fill="#8c99bf" stroke="#5c7298" stroke-width="6"/>
-              <path d="M324 272q-1-22 24-23l254-13q26-1 26 25v209q0 22-24 24l-251 6q-27 0-27-27Z" fill="url(#crt-glass)" stroke="#45668e" stroke-width="6"/>
-              <path d="M355 268q38-25 102-24h129" fill="none" stroke="#fff" stroke-width="5" opacity=".52"/>
-              <rect x="317" y="547" width="40" height="8" rx="3" fill="#8592bb"/>
-              <g fill="#e8e3f1" stroke="#8992b8" stroke-width="3"><circle cx="533" cy="547" r="9"/><circle cx="570" cy="547" r="9"/><circle cx="607" cy="547" r="9"/></g>
-              <path d="M315 576h335v49q0 14-14 14H327q-14 0-14-14Z" fill="#ebe6ef" stroke="#536b92" stroke-width="5"/>
-              <rect x="354" y="594" width="131" height="12" rx="5" fill="#b8cbea" stroke="#8295b7" stroke-width="3"/>
-              <circle cx="339" cy="603" r="8" fill="#c5d5ef" stroke="#8295b7" stroke-width="3"/>
-              <g stroke="#8295b7" stroke-width="5" stroke-linecap="round"><path d="M567 598h43"/><path d="M567 609h43"/><path d="M567 620h43"/></g>
+              <!-- Consistent CRT casing: rear depth, single front bezel, inset screen -->
+              <path d="M323 220 623 205Q672 202 690 244L728 280V498Q724 539 683 549L642 560 323 555Z" fill="#8e92b3" stroke="#536b92" stroke-width="5" stroke-linejoin="round"/>
+              <rect x="284" y="218" width="386" height="337" rx="43" fill="url(#crt-frame)" stroke="#536b92" stroke-width="6"/>
+              <rect x="307" y="241" width="340" height="269" rx="29" fill="#94a6c5" stroke="#687caa" stroke-width="5"/>
+              <rect x="322" y="256" width="310" height="240" rx="23" fill="url(#crt-glass)" stroke="#46688e" stroke-width="5"/>
+              <path d="M343 276Q358 269 389 269H606" fill="none" stroke="#fff" stroke-width="5" opacity=".58" stroke-linecap="round"/>
+              <rect x="316" y="531" width="47" height="7" rx="3" fill="#8e9cbb"/>
+              <g fill="#e8e3f1" stroke="#8992b8" stroke-width="3"><circle cx="543" cy="535" r="8"/><circle cx="577" cy="535" r="8"/><circle cx="611" cy="535" r="8"/></g>
+              <!-- Matching base centered beneath the monitor -->
+              <rect x="313" y="558" width="328" height="72" rx="20" fill="#eae5f0" stroke="#536b92" stroke-width="5"/>
+              <rect x="362" y="584" width="126" height="12" rx="5" fill="#b8cbea" stroke="#8295b7" stroke-width="3"/>
+              <circle cx="339" cy="592" r="9" fill="#c5d5ef" stroke="#8295b7" stroke-width="3"/>
+              <g stroke="#8295b7" stroke-width="5" stroke-linecap="round"><path d="M560 583h48"/><path d="M560 596h48"/><path d="M560 609h48"/></g>
             </g>
             <g font-family="'Trebuchet MS',Verdana,sans-serif" fill="#2b446a" text-anchor="middle">
-              <text x="475" y="348" font-size="38" font-weight="800">HELLO, I'M</text>
-              <text x="475" y="414" font-size="61" font-weight="900" letter-spacing="2">LUJAIN</text>
-              <text x="475" y="476" font-size="22" font-weight="600" fill="#607da4">AI × Cybersecurity</text>
+              <text x="477" y="336" font-size="33" font-weight="800">HELLO, I'M</text>
+              <text x="477" y="394" font-size="54" font-weight="900" letter-spacing="2">LUJAIN</text>
+              <text x="477" y="470" font-size="20" font-weight="600" fill="#607da4">AI × Cybersecurity</text>
             </g>
-            <path d="m475 423 8 16 16 8-16 8-8 16-8-16-16-8 16-8Z" fill="#ec9cbb"/>
+            <path class="hero-star hero-star-screen" d="m477 410 7 15 15 7-15 7-7 15-7-15-15-7 15-7Z" fill="#ec9cbb"/>
             <g transform="translate(586 525) rotate(7)" filter="url(#crt-shadow)"><rect width="198" height="77" rx="5" fill="#fff0c8" stroke="#e1ba66" stroke-width="2"/><text x="99" y="48" text-anchor="middle" font-family="monospace" font-size="20" font-weight="bold" fill="#334969">ideas → impact</text></g>
             <text x="445" y="670" text-anchor="middle" font-family="monospace" font-size="16" letter-spacing="3" fill="#7c9bb9">AI × CYBERSECURITY × IMPACT ✦</text>
           </svg>
