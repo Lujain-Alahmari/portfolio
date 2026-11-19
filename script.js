@@ -106,19 +106,23 @@ function attachControls(win, id, persistent = false) {
   minimize?.addEventListener("click", dismiss);
   win.addEventListener("pointerdown", () => activate(win));
 
-  // Dragging is enabled for mouse/pen, but not touch: on phones the content stays accessible.
+  // Drag windows by their title bars with mouse, touch, or pen.
   const bar = win.querySelector(".window-titlebar");
   if (!bar) return;
   bar.addEventListener("pointerdown", e => {
-    if (e.target.closest("button") || e.pointerType === "touch" || window.innerWidth < 721) return;
+    if (e.target.closest("button") || e.button !== 0) return;
     e.preventDefault();
+    activate(win);
     const initialX = e.clientX, initialY = e.clientY;
-    const startX = Number(win.dataset.dragX || 0), startY = Number(win.dataset.dragY || 0);
+    const startX = Number(win.dataset.dragX || 0);
+    const startY = Number(win.dataset.dragY || 0);
     bar.setPointerCapture(e.pointerId);
     const moving = ev => {
+      if (ev.pointerId !== e.pointerId) return;
       const dx = startX + ev.clientX - initialX;
       const dy = startY + ev.clientY - initialY;
-      win.dataset.dragX = String(dx); win.dataset.dragY = String(dy);
+      win.dataset.dragX = String(dx);
+      win.dataset.dragY = String(dy);
       if (persistent) {
         win.style.setProperty("--offset-x", dx + "px");
         win.style.setProperty("--offset-y", dy + "px");
@@ -127,7 +131,8 @@ function attachControls(win, id, persistent = false) {
         win.style.setProperty("--dy", dy + "px");
       }
     };
-    const end = () => {
+    const end = ev => {
+      if (ev.pointerId !== e.pointerId) return;
       bar.removeEventListener("pointermove", moving);
       bar.removeEventListener("pointerup", end);
       bar.removeEventListener("pointercancel", end);
