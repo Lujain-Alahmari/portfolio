@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="690" viewBox="0 0 900 690" role="img" aria-labelledby="title desc">
+<title id="title">Lujain — AI and Cybersecurity</title><desc id="desc">A pastel-blue illustration with a retro computer, code, security shield and sparkling stars</desc>
+<defs>
+<linearGradient id="arch" x1=".1" y1="0" x2=".88" y2="1"><stop stop-color="#d7ebfc"/><stop offset="1" stop-color="#a9ccec"/></linearGradient>
+<linearGradient id="screen" x1="0" y1="0" x2=".9" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#e9f5ff"/></linearGradient>
+<linearGradient id="bezel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#6f91b2"/><stop offset="1" stop-color="#375671"/></linearGradient>
+<filter id="drop" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#537ca8" flood-opacity=".2"/></filter>
+<style>
+svg{font-family:'Trebuchet MS',Verdana,sans-serif}.twinkle{transform-box:fill-box;transform-origin:center;animation:twink 3.4s ease-in-out infinite}.twinkle:nth-of-type(2){animation-delay:1s}@keyframes twink{0%,100%{opacity:.7;transform:scale(.9)}50%{opacity:1;transform:scale(1.18)}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</defs>
+<path d="M135 555V290C135 116 267 45 448 45s313 84 313 245v265c0 22-16 37-36 37H171c-20 0-36-15-36-37Z" fill="#f7ddeb"/>
+<path d="M120 539V278C120 105 255 35 434 35s313 84 313 243v261c0 22-17 36-38 36H157c-20 0-37-14-37-36Z" fill="url(#arch)" stroke="#a2c4e4" stroke-width="2"/>
+<circle cx="298" cy="204" r="76" fill="#f5faff" opacity=".72"/>
+<path d="M212 150c-14-27-48-28-63-6-34-9-48 22-33 41h114c21-15 13-35-18-35Z" fill="#fff" opacity=".8"/>
+<path d="M655 171c-12-21-37-19-49-1-27-4-32 26-14 33h79c16-12 7-30-16-32Z" fill="#fff" opacity=".85"/>
+<g fill="none" stroke="#fbfcff" stroke-width="3" stroke-dasharray="8 10" opacity=".9"><path d="M221 347c-57 18-80 77-52 121"/><path d="M690 340c44 28 51 91 12 133"/></g>
+<g fill="#f6a3c2" class="twinkle"><path d="m92 105 9 23 23 9-23 9-9 23-9-23-23-9 23-9Z"/><path d="m792 433 8 19 20 8-20 8-8 20-8-20-20-8 20-8Z"/></g>
+<g transform="translate(187 334) rotate(-10)" filter="url(#drop)"><rect width="82" height="82" rx="21" fill="#f4faff" stroke="#86abd0" stroke-width="3"/><text x="41" y="55" font-family="monospace" text-anchor="middle" font-size="38" font-weight="bold" fill="#5c86ab">&lt;/&gt;</text></g>
+<g transform="translate(647 353)" filter="url(#drop)"><path d="M48 0 91 19v47c-3 38-32 55-43 60C37 121 7 104 5 66V19Z" fill="#e3f2ff" stroke="#7297c1" stroke-width="6"/><path d="M48 16 77 30v37c0 23-16 35-29 42-14-7-30-19-30-42V30Z" fill="none" stroke="#fff" stroke-width="4"/><rect x="29" y="59" width="37" height="32" rx="7" fill="#607fa2"/><path d="M36 60V49a12 12 0 0 1 24 0v11" fill="none" stroke="#607fa2" stroke-width="6"/><circle cx="48" cy="72" r="4" fill="white"/></g>
+<g transform="translate(217 475)" filter="url(#drop)"><rect x="0" y="50" width="100" height="35" rx="12" fill="#c3def7" stroke="#6991b7" stroke-width="3"/><rect x="0" y="10" width="100" height="35" rx="12" fill="#edf6ff" stroke="#6991b7" stroke-width="3"/><circle cx="16" cy="28" r="4" fill="#ee9aba"/><circle cx="29" cy="28" r="4" fill="#ee9aba"/><circle cx="16" cy="68" r="4" fill="#ee9aba"/><circle cx="29" cy="68" r="4" fill="#ee9aba"/><rect x="30" y="-24" width="47" height="44" rx="8" fill="#fff" stroke="#7299bd" stroke-width="3"/><text x="53" y="4" text-anchor="middle" font-family="monospace" font-size="20" font-weight="bold" fill="#769bb9">AI</text></g>
+<g transform="translate(295 233) rotate(-5 175 155)" filter="url(#drop)">
+<rect x="0" y="0" width="373" height="301" rx="27" fill="url(#bezel)" stroke="#375773" stroke-width="5"/>
+<rect x="15" y="17" width="343" height="265" rx="15" fill="url(#screen)" stroke="#c4dcf0" stroke-width="3"/>
+<path d="M16 50V32q0-15 16-15h311q15 0 15 15v18Z" fill="#c5dbf0"/>
+<circle cx="39" cy="35" r="7" fill="#ec93b6"/><circle cx="60" cy="35" r="7" fill="#f5faff" stroke="#89a8cb"/><circle cx="81" cy="35" r="7" fill="#f5faff" stroke="#89a8cb"/>
+<text x="187" y="131" text-anchor="middle" font-size="28" font-weight="bold" letter-spacing="1" fill="#263c55">HELLO, I'M LUJAIN</text>
+<path d="M205 144q52-9 110-4" fill="none" stroke="#f19ab9" stroke-width="5" stroke-linecap="round"/>
+<path d="m187 166 7 18 18 7-18 7-7 18-7-18-18-7 18-7Z" fill="#ee9bb9"/>
+<text x="187" y="243" text-anchor="middle" font-size="19" font-weight="bold" fill="#668bae">AI × Cybersecurity</text>
+<path d="M163 300h47l7 49h-61Z" fill="#597b9c"/><rect x="119" y="344" width="132" height="17" rx="9" fill="#b9d4ee" stroke="#668baa" stroke-width="3"/>
+</g>
+<g transform="translate(577 467) rotate(7)" filter="url(#drop)"><rect width="204" height="85" fill="#fff0c5" stroke="#e9c66d" stroke-width="2"/><text x="102" y="52" font-family="monospace" font-size="21" font-weight="bold" text-anchor="middle" fill="#304d69">ideas → impact</text></g>
+<g fill="#f398b6" class="twinkle"><path d="m467 197 6 16 16 6-16 6-6 16-6-16-16-6 16-6Z"/></g>
+<text x="445" y="637" text-anchor="middle" font-family="monospace" font-size="18" letter-spacing="4" fill="#819db9">AI × CYBERSECURITY × IMPACT ✦</text>
+</svg>
