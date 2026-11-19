@@ -74,3 +74,8 @@
   .brand-star,.welcome-star,.monitor-star,.sparkle,.art-star {animation:none!important;}
   .detail-window,.desktop-window,.stagger-item,.nav-spark,.intro-copy,.intro-art {animation:none!important;}
 }
+
+/* Window dragging and desktop icon layering only */
+.window-titlebar { touch-action: none; }
+.desktop-icons { z-index: 1; }
+.desktop-sticker { z-index: 0; }
