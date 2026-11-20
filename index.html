@@ -28,11 +28,26 @@
     .pixel-spark,.pixel-spark-two{transform-box:fill-box;transform-origin:center;animation:retro-star-pulse 2.6s ease-in-out infinite}
     .pixel-spark-two{animation-delay:1.1s}
     .retro-side-caption{position:absolute;right:clamp(20px,6vw,85px);bottom:31px;font:11px monospace;letter-spacing:2px;color:#778ba5}
-    .crt-screen-words .crt-line{opacity:0;animation:crt-type-line 6s steps(1,end) infinite}
-    .crt-screen-words .crt-line-1{animation-delay:0s}
-    .crt-screen-words .crt-line-2{animation-delay:2s}
-    .crt-screen-words .crt-line-3{animation-delay:4s}
-    @keyframes crt-type-line{0%,8%{opacity:0}12%,100%{opacity:1}}
+    /* Terminal-style text: each line enters in sequence, then the screen restarts. */
+    .crt-screen-words .crt-line{opacity:0;animation:crt-type-line 7.5s ease-out infinite}
+    .crt-screen-words .crt-line-1{--line-start:0}
+    .crt-screen-words .crt-line-2{animation-name:crt-type-line-two}
+    .crt-screen-words .crt-line-3{animation-name:crt-type-line-three}
+    @keyframes crt-type-line {
+      0%{opacity:0;transform:translateX(-12px)}
+      6%,88%{opacity:1;transform:translateX(0)}
+      94%,100%{opacity:0;transform:translateX(0)}
+    }
+    @keyframes crt-type-line-two {
+      0%,23%{opacity:0;transform:translateX(-12px)}
+      30%,88%{opacity:1;transform:translateX(0)}
+      94%,100%{opacity:0;transform:translateX(0)}
+    }
+    @keyframes crt-type-line-three {
+      0%,47%{opacity:0;transform:translateX(-12px)}
+      54%,88%{opacity:1;transform:translateX(0)}
+      94%,100%{opacity:0;transform:translateX(0)}
+    }
     @media(prefers-reduced-motion:reduce){.crt-screen-words .crt-line{animation:none!important;opacity:1}}
     @keyframes retro-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
     @keyframes retro-folder{0%,100%{transform:rotate(-10deg)}50%{transform:rotate(1deg)}}
