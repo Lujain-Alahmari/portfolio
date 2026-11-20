@@ -23,32 +23,17 @@
     .retro-hero .social-links{position:relative;z-index:3;margin-top:24px}
     .retro-illustration{position:absolute;z-index:2;width:clamp(285px,37vw,515px);right:clamp(5px,4vw,60px);top:160px;transform:rotate(2deg);filter:drop-shadow(8px 12px 0 #c8d7e7)}
     .pixel-computer{display:block;width:100%;height:auto;overflow:visible;image-rendering:pixelated}
-    .crt-machine{animation:retro-float 5s ease-in-out infinite}
+    .crt-machine{animation:none;transform:none}
     .floating-folder{transform-origin:365px 80px;animation:retro-folder 5s ease-in-out infinite}
     .pixel-spark,.pixel-spark-two{transform-box:fill-box;transform-origin:center;animation:retro-star-pulse 2.6s ease-in-out infinite}
     .pixel-spark-two{animation-delay:1.1s}
     .retro-side-caption{position:absolute;right:clamp(20px,6vw,85px);bottom:31px;font:11px monospace;letter-spacing:2px;color:#778ba5}
-    /* Terminal-style text: each line enters in sequence, then the screen restarts. */
-    .crt-screen-words .crt-line{opacity:0;animation:crt-type-line 7.5s ease-out infinite}
-    .crt-screen-words .crt-line-1{--line-start:0}
-    .crt-screen-words .crt-line-2{animation-name:crt-type-line-two}
-    .crt-screen-words .crt-line-3{animation-name:crt-type-line-three}
-    @keyframes crt-type-line {
-      0%{opacity:0;transform:translateX(-12px)}
-      6%,88%{opacity:1;transform:translateX(0)}
-      94%,100%{opacity:0;transform:translateX(0)}
-    }
-    @keyframes crt-type-line-two {
-      0%,23%{opacity:0;transform:translateX(-12px)}
-      30%,88%{opacity:1;transform:translateX(0)}
-      94%,100%{opacity:0;transform:translateX(0)}
-    }
-    @keyframes crt-type-line-three {
-      0%,47%{opacity:0;transform:translateX(-12px)}
-      54%,88%{opacity:1;transform:translateX(0)}
-      94%,100%{opacity:0;transform:translateX(0)}
-    }
-    @media(prefers-reduced-motion:reduce){.crt-screen-words .crt-line{animation:none!important;opacity:1}}
+    /* Real character-by-character typing is controlled in script.js. */
+    .crt-screen-words .crt-line{opacity:1}
+    .crt-typing-cursor{opacity:0;fill:#effff5}
+    .crt-screen-words.is-typing .crt-typing-cursor{opacity:1;animation:crt-cursor-blink .75s steps(1,end) infinite}
+    @keyframes crt-cursor-blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+    @media(prefers-reduced-motion:reduce){.crt-screen-words .crt-line{opacity:1!important}.crt-typing-cursor{display:none!important}}
     @keyframes retro-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
     @keyframes retro-folder{0%,100%{transform:rotate(-10deg)}50%{transform:rotate(1deg)}}
     @keyframes retro-star-pulse{0%,100%{opacity:.6;transform:scale(.82)}50%{opacity:1;transform:scale(1.18)}}
@@ -123,6 +108,7 @@
               <text class="crt-line crt-line-1" x="167" y="180">&gt; BUILD</text>
               <text class="crt-line crt-line-2" x="167" y="215">&gt; LEARN</text>
               <text class="crt-line crt-line-3" x="167" y="250">&gt; CREATE</text>
+              <rect class="crt-typing-cursor" x="167" y="229" width="10" height="25" rx="1" />
             </g>
             <g class="little-floppy" stroke="#242339" stroke-width="4">
               <path d="M23 267h69v74H23Z" fill="#c8d2ef"/><path d="M37 270h39v24H37Z" fill="#f3f5fa"/><path d="M31 308h53v24H31Z" fill="#eaa4c2"/><path d="M48 313h19" stroke-width="3"/>
