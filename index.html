@@ -28,6 +28,12 @@
     .pixel-spark,.pixel-spark-two{transform-box:fill-box;transform-origin:center;animation:retro-star-pulse 2.6s ease-in-out infinite}
     .pixel-spark-two{animation-delay:1.1s}
     .retro-side-caption{position:absolute;right:clamp(20px,6vw,85px);bottom:31px;font:11px monospace;letter-spacing:2px;color:#778ba5}
+    .crt-screen-words .crt-line{opacity:0;animation:crt-type-line 6s steps(1,end) infinite}
+    .crt-screen-words .crt-line-1{animation-delay:0s}
+    .crt-screen-words .crt-line-2{animation-delay:2s}
+    .crt-screen-words .crt-line-3{animation-delay:4s}
+    @keyframes crt-type-line{0%,8%{opacity:0}12%,100%{opacity:1}}
+    @media(prefers-reduced-motion:reduce){.crt-screen-words .crt-line{animation:none!important;opacity:1}}
     @keyframes retro-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
     @keyframes retro-folder{0%,100%{transform:rotate(-10deg)}50%{transform:rotate(1deg)}}
     @keyframes retro-star-pulse{0%,100%{opacity:.6;transform:scale(.82)}50%{opacity:1;transform:scale(1.18)}}
@@ -98,8 +104,10 @@
               <path d="M377 357c43 5 54 36 32 57-13 10-30 6-40 2" fill="none" stroke-width="3"/>
               <path d="M357 414h26l7 20h-40Z" fill="#ede1dc" stroke-width="3"/>
             </g>
-            <g font-family="monospace" fill="#effff5" font-size="25" font-weight="bold">
-              <text x="167" y="180">&gt; BUILD</text><text x="167" y="215">&gt; LEARN</text><text x="167" y="250">&gt; CREATE</text>
+            <g class="crt-screen-words" font-family="monospace" fill="#effff5" font-size="25" font-weight="bold">
+              <text class="crt-line crt-line-1" x="167" y="180">&gt; BUILD</text>
+              <text class="crt-line crt-line-2" x="167" y="215">&gt; LEARN</text>
+              <text class="crt-line crt-line-3" x="167" y="250">&gt; CREATE</text>
             </g>
             <g class="little-floppy" stroke="#242339" stroke-width="4">
               <path d="M23 267h69v74H23Z" fill="#c8d2ef"/><path d="M37 270h39v24H37Z" fill="#f3f5fa"/><path d="M31 308h53v24H31Z" fill="#eaa4c2"/><path d="M48 313h19" stroke-width="3"/>
