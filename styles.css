@@ -206,3 +206,47 @@ body {background:#fffaf1;color:var(--ink)}
   .desktop-icon {background:transparent;border-radius:5px;}
   .desktop {box-shadow:0 0 0 3px #fdf7fa,5px 7px 0 #d2c8dd;}
 }
+
+/* Smooth navigation and window transitions — visual motion only */
+:root { --transition-soft: cubic-bezier(.22,1,.36,1); }
+html { scroll-behavior:smooth; scroll-padding-top:24px; }
+.detail-window {
+  animation: soft-window-enter .36s var(--transition-soft) both;
+  transform-origin:center;
+}
+@keyframes soft-window-enter {
+  from { opacity:0; scale:.965; }
+  to { opacity:1; scale:1; }
+}
+.detail-window.is-closing,
+.desktop-window.is-closing {
+  animation:soft-window-exit .3s ease-in-out both!important;
+}
+@keyframes soft-window-exit {
+  from {opacity:1;scale:1;}
+  to {opacity:0;scale:.975;}
+}
+.detail-window.window-focus { animation:soft-window-focus .28s var(--transition-soft); }
+@keyframes soft-window-focus {from {scale:.99;} to {scale:1;}}
+.stagger-item {
+  animation:soft-item-enter .4s var(--transition-soft) both;
+  animation-delay:calc(var(--item-order) * 45ms + 70ms);
+}
+@keyframes soft-item-enter {
+  from { opacity:0;translate:0 8px; }
+  to { opacity:1;translate:0 0; }
+}
+.scroll-reveal {
+  transition: opacity .7s var(--transition-soft),translate .7s var(--transition-soft);
+  translate:0 16px;
+}
+.btn,.topnav a,.topnav button,.desktop-icon,.start-button {
+  transition-duration:.28s;
+  transition-timing-function:var(--transition-soft);
+}
+@media (prefers-reduced-motion:reduce) {
+  html {scroll-behavior:auto;}
+  .detail-window,.detail-window.is-closing,.desktop-window.is-closing,
+  .detail-window.window-focus,.stagger-item {animation:none!important;}
+  .scroll-reveal {opacity:1!important;translate:none!important;transition:none!important;}
+}
