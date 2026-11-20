@@ -54,7 +54,13 @@ const sections = {
       <div class="resume-line"><div class="resume-date">MAY 2022 — AUG 2022</div><h3>IT Support Trainee</h3><p><strong>King Khalid University</strong><br/>Provided on-site and remote technical support, prepared staff computers and software, and supported university computer laboratories.</p></div>
       <hr class="section-rule"/><span class="meta">SELECTED TRAINING</span>
       <div class="resume-line"><div class="resume-date">2026</div><h3>AI Engineering Bootcamp · Olo Academy</h3><p>Training in Python, ML, deep learning, NLP and LLM applications.</p></div>
-      <div class="resume-line"><div class="resume-date">2024 / 2021</div><h3>Data Analysis · STC–IBM / TensorFlow on Google Cloud · Qwiklabs</h3></div>`
+      <div class="resume-line"><div class="resume-date">2024 / 2021</div><h3>Data Analysis · STC–IBM / TensorFlow on Google Cloud · Qwiklabs</h3></div>
+      <hr class="section-rule"/><span class="meta">GOOGLE CLOUD · AI & CLOUD KINGDOM TOUR</span>
+      <div class="resume-line"><div class="resume-date">JUL 05, 2026</div><h3>Offline Cross-Platform AI with Gemma</h3><p>Google Cloud · Certificate of attendance · Issued Aug 12, 2026</p></div>
+      <div class="resume-line"><div class="resume-date">JUL 06, 2026</div><h3>Extending AI Agents with Custom Web Tools</h3><p>Google Cloud · Certificate of attendance · Issued Aug 13, 2026</p></div>
+      <div class="resume-line"><div class="resume-date">JUL 07, 2026</div><h3>Implementing Local On-Device AI with Gemma 4</h3><p>Google Cloud · Certificate of attendance · Issued Aug 13, 2026</p></div>
+      <div class="resume-line"><div class="resume-date">JUL 08, 2026</div><h3>Kickstart Your Journey with ML using GCP</h3><p>Google Cloud · Certificate of attendance · Issued Aug 16, 2026</p></div>
+      <p><a href="https://lnkd.in/p/exBfus4Q" target="_blank" rel="noopener noreferrer">View Google Cloud workshop certificates ↗</a></p>`
   },
   skills: {
     title: "skills.ini",
