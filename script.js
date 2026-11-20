@@ -264,3 +264,57 @@ function sparkleAt(target) {
 document.querySelectorAll("[data-open]").forEach(el => {
   el.addEventListener("click", () => sparkleAt(el));
 });
+
+// Type out the three lines inside the retro computer, without moving the monitor.
+// This runs only when motion is enabled; otherwise the complete text remains visible.
+(() => {
+  const screen = document.querySelector(".crt-screen-words");
+  if (!screen || !("matchMedia" in window)) return;
+  const motionPref = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (motionPref.matches) return;
+
+  const lines = Array.from(screen.querySelectorAll(".crt-line"));
+  const cursor = screen.querySelector(".crt-typing-cursor");
+  if (lines.length !== 3 || !cursor) return;
+  const phrases = lines.map(line => line.textContent);
+  let active = true;
+  const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+  const moveCursor = (line, baseline) => {
+    let length = 0;
+    try { length = line.getComputedTextLength(); } catch (_) {}
+    cursor.setAttribute("x", String(167 + length + 5));
+    cursor.setAttribute("y", String(baseline - 21));
+  };
+  const showFullText = () => {
+    screen.classList.remove("is-typing");
+    lines.forEach((line, i) => { line.textContent = phrases[i]; });
+  };
+  const preferenceChanged = () => {
+    if (motionPref.matches) {
+      active = false;
+      showFullText();
+    }
+  };
+  motionPref.addEventListener?.("change", preferenceChanged);
+
+  (async () => {
+    while (active && !motionPref.matches) {
+      lines.forEach(line => { line.textContent = ""; });
+      screen.classList.add("is-typing");
+      for (let i = 0; i < lines.length && active; i++) {
+        const baseline = Number(lines[i].getAttribute("y"));
+        moveCursor(lines[i], baseline);
+        for (const letter of phrases[i]) {
+          if (!active) break;
+          lines[i].textContent += letter;
+          moveCursor(lines[i], baseline);
+          await sleep(letter === " " ? 95 : 125);
+        }
+        await sleep(450);
+      }
+      screen.classList.remove("is-typing");
+      await sleep(2600);
+    }
+  })();
+})();
