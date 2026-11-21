@@ -12,8 +12,8 @@
     .intro.retro-hero{position:relative;display:block;min-height:660px;padding:70px clamp(24px,7vw,105px) 75px;background:#fffaf0;isolation:isolate;overflow:hidden}
     .retro-hero-content{position:relative;z-index:1}
     .retro-super{font-size:clamp(25px,5.5vw,76px);letter-spacing:-.055em;line-height:.9;font-weight:800;color:#17171b;padding-left:clamp(36px,11vw,165px)}
-    .retro-super span{font-size:.42em;color:#f3a40b;margin-left:14px;vertical-align:top;display:inline-block;animation:retro-star-pulse 3s ease-in-out infinite}
-    .retro-word{font-family:Impact,'Arial Black',system-ui,sans-serif;font-weight:900;font-size:clamp(112px,20vw,279px);line-height:.78;letter-spacing:-.07em;color:#f25caa;white-space:nowrap;margin:4px 0 20px -8px;user-select:none}
+    .retro-super .super-star{width:.42em;height:.42em;margin-left:.18em;vertical-align:top;display:inline-block;overflow:visible;animation:retro-star-pulse 3s ease-in-out infinite;transform-origin:center;fill:#f3bd22;stroke:#26243a;stroke-width:3;stroke-linejoin:round}
+    .retro-word{font-family:Impact,'Arial Black',system-ui,sans-serif;font-weight:900;font-size:clamp(68px,20vw,279px);line-height:.78;letter-spacing:-.018em;color:#f25caa;white-space:nowrap;margin:4px 0 20px -8px;user-select:none}
     .retro-dot{color:#a9c9e9;letter-spacing:-.1em}
     .intro.retro-hero .retro-name{font:800 clamp(42px,5.8vw,77px)/1.05 'DM Sans',Arial,sans-serif;letter-spacing:-.055em;color:#17171b;margin:9px 0 12px}
     .intro.retro-hero .retro-name em{font-family:inherit;font-style:normal;color:#17171b;font-weight:800}
@@ -41,13 +41,13 @@
     @media(max-width:720px){
       .intro.retro-hero{min-height:0;padding:55px 20px 60px;gap:0}
       .retro-super{padding-left:20%;font-size:clamp(26px,8vw,50px)}
-      .retro-word{font-size:clamp(90px,21vw,155px);margin:12px 0 0 -3px}
+      .retro-word{font-size:clamp(68px,20vw,279px);margin:12px 0 0 -3px}
       .retro-illustration{position:relative;right:auto;top:auto;width:min(90%,360px);margin:-8px auto 10px;transform:rotate(2deg)}
       .intro.retro-hero .retro-name{font-size:clamp(39px,9vw,66px);margin:0 0 14px}
       .retro-hero .social-links{margin-top:22px}
       .retro-side-caption{position:static;display:block;text-align:right;margin-top:20px}
     }
-    @media(max-width:390px){.retro-word{font-size:21vw}.retro-illustration{width:100%;margin-top:2px}}
+    @media(max-width:390px){.retro-word{font-size:clamp(68px,20vw,279px)}.retro-illustration{width:100%;margin-top:2px}}
     @media(prefers-reduced-motion:reduce){.crt-machine,.floating-folder,.pixel-spark,.pixel-spark-two,.retro-super span{animation:none!important}}
   </style>
   <script src="script.js" defer></script>
@@ -65,7 +65,7 @@
     <main id="home">
       <section class="intro retro-hero" aria-label="Introduction">
         <div class="retro-hero-content">
-          <div class="retro-super">super<span aria-hidden="true">✳</span></div>
+          <div class="retro-super">super<svg class="super-star" aria-hidden="true" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M43 4H57L62 30L82 15L91 27L74 45L97 43V57L74 62L91 82L82 91L62 74L57 97H43L38 74L18 91L9 82L26 62L3 57V43L26 38L9 18L18 9L38 26Z"/></svg></div>
           <div class="retro-word" aria-hidden="true">hello<span class="retro-dot">.</span></div>
           <h1 class="retro-name">I'm <em>Lujain.</em></h1>
           <div class="role-line"><span class="role-bullet"></span> AI Engineer <span class="role-divider">/</span> NLP &amp; RAG Applications<span class="typing-cursor">_</span></div>
