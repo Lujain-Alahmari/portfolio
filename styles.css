@@ -250,3 +250,49 @@ html { scroll-behavior:smooth; scroll-padding-top:24px; }
   .detail-window.window-focus,.stagger-item {animation:none!important;}
   .scroll-reveal {opacity:1!important;translate:none!important;transition:none!important;}
 }
+
+/* Navigation polish: softer, consistent opening and closing motion. */
+:root { --nav-motion:cubic-bezier(.22,1,.36,1); }
+.detail-window {
+  animation:nav-window-in .48s var(--nav-motion) both;
+  transform-origin:50% 50%;
+}
+@keyframes nav-window-in {
+  0% {opacity:0;scale:.975;translate:0 16px;}
+  65% {opacity:1;}
+  100% {opacity:1;scale:1;translate:0 0;}
+}
+.detail-window.is-closing,
+.desktop-window.is-closing {
+  animation:nav-window-out .32s cubic-bezier(.4,0,.6,1) both!important;
+}
+@keyframes nav-window-out {
+  from {opacity:1;scale:1;translate:0 0;}
+  to {opacity:0;scale:.985;translate:0 10px;}
+}
+.detail-window.window-focus {
+  animation:nav-window-focus .34s var(--nav-motion) both;
+}
+@keyframes nav-window-focus {
+  0% {filter:brightness(.97);}
+  100% {filter:brightness(1);}
+}
+.detail-body > .meta,
+.detail-body > h2,
+.detail-body > p,
+.detail-body > .detail-grid,
+.detail-body > .section-rule {
+  animation:nav-content-in .48s var(--nav-motion) both;
+}
+@keyframes nav-content-in {
+  from {opacity:0;translate:0 9px;}
+  to {opacity:1;translate:0 0;}
+}
+@media (prefers-reduced-motion:reduce) {
+  .detail-window,.detail-window.is-closing,.desktop-window.is-closing,
+  .detail-window.window-focus,
+  .detail-body > .meta,.detail-body > h2,.detail-body > p,
+  .detail-body > .detail-grid,.detail-body > .section-rule {
+    animation:none!important;transition:none!important;
+  }
+}
