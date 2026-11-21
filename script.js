@@ -107,7 +107,7 @@ function attachControls(win, id, persistent = false) {
       else { win.remove(); windows.delete(id); }
     };
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) finish();
-    else setTimeout(finish, 300);
+    else setTimeout(finish, 320);
   };
   close?.addEventListener("click", dismiss);
   minimize?.addEventListener("click", dismiss);
